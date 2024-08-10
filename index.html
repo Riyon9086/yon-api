@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video API</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+    <h1>Video API</h1>
+    <div id="video-container">
+        <video id="videoPlayer" controls>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <button onclick="loadVideo('1.mp4')">Load Video 1</button>
+    <button onclick="loadVideo('2.mp4')">Load Video 2</button>
+
+    <script>
+        function loadVideo(filename) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            const videoSource = document.getElementById('videoSource');
+            videoSource.src = `./videos/${filename}`;
+            videoPlayer.load();
+        }
+    </script>
+</body>
+</html>

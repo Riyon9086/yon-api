@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#video-container {
+    margin: 20px auto;
+    max-width: 600px;
+}
